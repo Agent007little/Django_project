@@ -1,1 +1,1 @@
-Link - https://django-project-8q3b.onrender.com
+Ссылка на сайт - https://django-project-8q3b.onrender.com
