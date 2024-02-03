@@ -1,6 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 
-def hello_world(request):
-    """Функция выводит фразу hello world на главной странице"""
-    return HttpResponse('hello world')
+def home_page(request):
+    """Функция выводит главную страницу"""
+    return render(request, 'posts/home_page.html', {'title': 'ITwitter.com'})
