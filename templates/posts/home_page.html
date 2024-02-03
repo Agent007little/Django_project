@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
     <title>{{ title }}</title>
 {% endblock %}
 {% block main %}
-    <h1>ITwitter</h1>
+    <div id="banner">
+        <div id="banner-content">
+            <div id="group-28">
+                <img src="{% static 'pictures/main-page/Vector.png'%}" id="logo">
+                <h2>Оставайся на связи с друзьями, даже когда их нет рядом</h2>
+                <div id="group-28-buttons">
+                    <button id="registration">Зарегистрироваться</button>
+                    <button id="log-in">Войти</button>
+                </div>
+            </div>
+        <div id="cover">
+            <img src="{% static 'pictures/main-page/cover.png'%}">
+        </div>
+        </div>
+
+    </div>
 {% endblock %}
