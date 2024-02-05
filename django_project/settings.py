@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_project',
+        'NAME': 'django_project_djh6',
         'HOST': 'dpg-cn0beqnqd2ns73cgetag-a',
         'USER': 'django_project_djh6_user',  # Указать имя пользователя postgres
         'PASSWORD': 'ICR3FkEcAeNn5WjIzaL4ZEXOGB6TXbGA',  # Указать пароль
