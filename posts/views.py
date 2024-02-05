@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
-# Create your views here.
+
+def hello_world(request):
+    """Функция выводит фразу hello world на главной странице"""
+    return HttpResponse('hello world')
