@@ -20,7 +20,7 @@ p {
         text-align: center;
         height: 100vh;
     }
-    #group-28 {
+    .group-28 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -31,12 +31,15 @@ p {
         margin-left: 16px;
         margin-right: 16px;
     }
-    #group-28 > h2 {
+    .group-28 > h2 {
         font-family: 'Lato', sans-serif;
         font-weight: 900;
+        font-size: xx-large;
         flex: 1;
+        width: 90%;
+        text-align: center;
     }
-    #group-28-buttons {
+    .group-28-buttons {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -44,21 +47,22 @@ p {
         flex: 1;
 }
 
-    #group-28-buttons button {
+    .group-28-buttons button {
         font-family: 'Lato', sans-serif;
         font-weight: 700;
+        font-size: large;
         border: 2px solid blue;
-        border-radius: 20px;
-        width: 90%;
+        border-radius: 15px;
+        width: 100%;
         margin: 5px;
     }
 
-    #group-28-buttons button:first-child {
+    .group-28-buttons button:first-child {
         background-color: blue;
         color: white;
     }
 
-    #group-28-buttons button:last-child {
+    .group-28-buttons button:last-child {
         background-color: transparent;
         color: blue;
     }
@@ -153,6 +157,7 @@ p {
         flex-wrap: wrap;
         align-items: start;
         position: relative;
+        margin-bottom: 5px;
     }
     .post-main-header-name,
     .post-main-header-sign {
@@ -186,8 +191,30 @@ p {
     .post-main-content {
         flex-grow: 1;
     }
-
+    .post-main-content > p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
+    .post-main-content > img {
+        margin-top: 10px;
+        border-radius: 5%;
+    }
     .post-main-footer {
         height: 10%;
+        float: left;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .post-main-footer div {
+        flex: 1;
+    }
+    .post-main-footer div img {
+        margin-right: 10px;
+    }
+    .post-main-footer div p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: #B1B1B1;
     }
 }
