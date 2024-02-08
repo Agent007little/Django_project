@@ -32,7 +32,7 @@ p {
         margin-right: 16px;
     }
     #group-28 > h2 {
-        font-family: Lato, sans-serif;
+        font-family: 'Lato', sans-serif;
         font-weight: 900;
         flex: 1;
     }
@@ -45,7 +45,7 @@ p {
 }
 
     #group-28-buttons button {
-        font-family: Lato, sans-serif;
+        font-family: 'Lato', sans-serif;
         font-weight: 700;
         border: 2px solid blue;
         border-radius: 20px;
@@ -92,12 +92,38 @@ p {
         color: white;
         font-size: 48px;
     }
-    #count-users, #all-massages, #today-messages {
+    #statistics-count-users, #statistics-all-massages, #statistics-today-messages {
         flex: 1;
         align-items: center;
         text-align: center;
         margin-top: 10%;
         margin-left: 20%;
         margin-right: 20%;
+    }
+
+    /*Часть со всеми сообщениями*/
+
+    #all-massages-list {
+        overflow: hidden;
+        height: auto;
+        margin-top: 10px;
+    }
+    #all-massages-list-title {
+        height: 15%;
+    }
+    #all-massages-list-title > p {
+        margin-left: 16px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        font-size: 16px;
+    }
+    #feed {
+        overflow: hidden;
+        height: auto;
+    }
+    #post {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
     }
 }
