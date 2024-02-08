@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,900;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,700&display=swap');
 body {
     margin: 0;
     padding: 0;
 }
+p {
+    margin: 0;
+    padding: 0;
+}
 @media screen and (max-width: 650px) {
+
+    /*Основной баннер мобильной версии*/
+
     #banner {
         display: flex;
         justify-content: flex-start;
@@ -62,5 +69,35 @@ body {
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+
+    /*Статистика пользователей и сообщений*/
+
+    #statistics {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background: #0057FF;
+    }
+    .statistic-text {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: white;
+        font-size: 18px;
+    }
+    .statistic-numbers {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 48px;
+    }
+    #count-users, #all-massages, #today-messages {
+        flex: 1;
+        align-items: center;
+        text-align: center;
+        margin-top: 10%;
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }
