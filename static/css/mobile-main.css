@@ -7,25 +7,30 @@ p {
     margin: 0;
     padding: 0;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 412px) and (min-width: 360px) {
 
     /*Основной баннер мобильной версии*/
 
     #banner {
+        margin: 0;
+        padding: 0;
         display: flex;
-        justify-content: flex-start;
         align-items: center;
+        height: 100%;
+        width: 100%;
     }
     #banner-content {
         text-align: center;
-        height: 100vh;
+        align-items: center;
+        height: 100%;
+        width: 100%;
     }
     .group-28 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 60vh;
+        height: 60%;
         margin-top: 24px;
         margin-bottom: 24px;
         margin-left: 16px;
@@ -35,8 +40,8 @@ p {
         font-family: 'Lato', sans-serif;
         font-weight: 900;
         font-size: xx-large;
-        flex: 1;
-        width: 90%;
+        width: 95%;
+        height: max-content;
         text-align: center;
     }
     .group-28-buttons {
@@ -44,16 +49,16 @@ p {
         flex-wrap: wrap;
         justify-content: center;
         width: 100%;
-        flex: 1;
 }
 
     .group-28-buttons button {
         font-family: 'Lato', sans-serif;
         font-weight: 700;
         font-size: large;
-        border: 2px solid blue;
-        border-radius: 15px;
+        border: 1px solid blue;
+        border-radius: 10px;
         width: 100%;
+        height: 10vh;
         margin: 5px;
     }
 
@@ -68,153 +73,11 @@ p {
     }
     #cover {
         position: relative;
+        height: 40%;
+        width: 100%;
     }
     #cover img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
-    }
-
-    /*Статистика пользователей и сообщений*/
-
-    #statistics {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        width: 100%;
-        background: #0057FF;
-    }
-    .statistic-text {
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-        color: white;
-        font-size: 18px;
-    }
-    .statistic-numbers {
-        font-family: 'Lato', sans-serif;
-        font-weight: 300;
-        color: white;
-        font-size: 48px;
-    }
-    #statistics-count-users, #statistics-all-massages, #statistics-today-messages {
-        flex: 1;
-        align-items: center;
-        text-align: center;
-        margin-top: 10%;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-
-    /*Часть со всеми сообщениями*/
-
-    #all-massages-list {
-        overflow: hidden;
-        height: auto;
-        margin-top: 10px;
-    }
-    #all-massages-list-title {
-        height: 15%;
-        margin-bottom: 10px;
-    }
-    #all-massages-list-title > p {
-        margin-left: 16px;
-        font-family: 'Lato', sans-serif;
-        font-weight: 900;
-        font-size: 16px;
-    }
-    #feed {
-        overflow: hidden;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .post {
-        display: flex;
-        height: auto;
-        margin-left: 5%;
-        margin-right: 10%;
-        margin-bottom: 10%;
-    }
-    .post-avatar {
-        margin-right: 5%;
-        width: 20%;
-        height: 100%;
-    }
-    .post-avatar img {
-        border-radius: 50%;
-        width: 100%;
-        height: 20%;
-    }
-    .post-main {
-        width: 80%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .post-main-header {
-        height: 10%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: start;
-        position: relative;
-        margin-bottom: 5px;
-    }
-    .post-main-header-name,
-    .post-main-header-sign {
-        width: 80%;
-        height: 50%;
-    }
-    .post-main-header-name > p {
-        font-family: 'Lato', sans-serif;
-        font-weight: 900;
-    }
-    .post-main-header-sign > p {
-        color: #ABACB1;
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-    }
-    .post-main-header-time {
-        margin-top: 5px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 20%;
-        height: 100%;
-        text-align: right;
-    }
-    .post-main-header-time > p {
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-        font-size: x-small;
-        color: #ABACB1;
-    }
-    .post-main-content {
-        flex-grow: 1;
-    }
-    .post-main-content > p {
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-    }
-    .post-main-content > img {
-        margin-top: 10px;
-        border-radius: 5%;
-    }
-    .post-main-footer {
-        height: 10%;
-        float: left;
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-    }
-    .post-main-footer div {
-        flex: 1;
-    }
-    .post-main-footer div img {
-        margin-right: 10px;
-    }
-    .post-main-footer div p {
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-        color: #B1B1B1;
     }
 }
