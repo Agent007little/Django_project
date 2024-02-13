@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'posts'
+    'posts',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,10 +78,10 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_project',
-        'HOST': 'localhost',
-        'USER': 'postgres',  # Указать имя пользователя postgres
-        'PASSWORD': '12345',  # Указать пароль
+        'NAME': 'django_project_djh6',
+        'HOST': 'dpg-cn0beqnqd2ns73cgetag-a',
+        'USER': 'django_project_djh6_user',  # Указать имя пользователя postgres
+        'PASSWORD': 'ICR3FkEcAeNn5WjIzaL4ZEXOGB6TXbGA',  # Указать пароль
         'PORT': 5432
     }
 }
@@ -122,6 +123,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

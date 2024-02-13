@@ -1,3 +1,7 @@
 from django.contrib import admin
+from posts.models import Massage, Hashtag, MassageHashtag, PostImage
 
-# Register your models here.
+admin.site.register(Massage)
+admin.site.register(Hashtag)
+admin.site.register(MassageHashtag)
+admin.site.register(PostImage)

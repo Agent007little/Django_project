@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <title>{{ title }}</title>
+{% endblock %}
+{% block main %}
+    <div id="banner">
+        <div id="banner-content">
+            <div class="group-28">
+                <img src="{% static 'pictures/main-page/Vector.png'%}">
+                <h2>Оставайся на связи<br> с друзьями, даже<br> когда их нет рядом</h2>
+                <div class="group-28-buttons">
+                    <button class="registration">Зарегистрироваться</button>
+                    <button class="log-in">Войти</button>
+                </div>
+            </div>
+        <div id="cover">
+            <img src="{% static 'pictures/main-page/cover.png'%}">
+        </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 412px) and (min-width: 360px) {
+
+    /*Основной баннер мобильной версии*/
+
+    #banner {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    #banner-content {
+        text-align: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    .group-28 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 60%;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .group-28 > h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        font-size: xx-large;
+        width: 95%;
+        height: max-content;
+        text-align: center;
+    }
+    .group-28-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+}
+
+    .group-28-buttons button {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: large;
+        border: 1px solid blue;
+        border-radius: 10px;
+        width: 100%;
+        height: 10vh;
+        margin: 5px;
+    }
+
+    .group-28-buttons button:first-child {
+        background-color: blue;
+        color: white;
+    }
+
+    .group-28-buttons button:last-child {
+        background-color: transparent;
+        color: blue;
+    }
+    #cover {
+        position: relative;
+        height: 40%;
+        width: 100%;
+    }
+    #cover img {
+        width: 100%;
+        height: 100%;
+    }
+}
