@@ -7,16 +7,16 @@
     <div id="banner">
         <div id="banner-content">
             <div class="group-28">
-                <img src="{% static 'pictures/main-page/Vector.png'%}">
+                <img src="{% static 'pictures/main-page/Vector.png' %}">
                 <h2>Оставайся на связи<br> с друзьями, даже<br> когда их нет рядом</h2>
                 <div class="group-28-buttons">
                     <button class="registration">Зарегистрироваться</button>
                     <button class="log-in">Войти</button>
                 </div>
             </div>
-        <div id="cover">
-            <img src="{% static 'pictures/main-page/cover.png'%}">
-        </div>
+            <div id="cover">
+                <img src="{% static 'pictures/main-page/cover.png' %}">
+            </div>
         </div>
     </div>
     <!--    Раздел со статистикой    -->
@@ -32,6 +32,150 @@
         <div id="statistics-today-messages">
             <p class="statistic-numbers">58</p>
             <p class="statistic-text">Написано сегодня</p>
+        </div>
+    </div>
+    <!--Сообщения пользователей-->
+    <div id="all-massages-list">
+        <div id="all-massages-list-title">
+            <p>Последние сообщения</p>
+        </div>
+        <div id="feed">
+            <div class="post">
+                <div class="post-avatar">
+                    <img src="{% static 'pictures/posts/image 9.png' %}">
+                </div>
+                <div class="post-main">
+                    <div class="post-main-header">
+                        <div class="post-main-header-name">
+                            <p>Винсет Вега</p>
+                        </div>
+                        <div class="post-main-header-sign">
+                            <p>@roizmangbn</p>
+                        </div>
+                        <div class="post-main-header-time">
+                            <p>28 минут назад</p>
+                        </div>
+                    </div>
+                    <div class="post-main-content">
+                        <p>У них там все немного не так. В смысле, у них там все точно так же, как и здесь, только
+                            немного по-другому.</p>
+                    </div>
+                    <div class="post-main-footer">
+                        <div class="post-main-footer-replies">
+                            <p><img src="{% static 'pictures/posts/replies.png' %}">21</p>
+                        </div>
+                        <div class="post-main-footer-favs">
+                            <p><img src="{% static 'pictures/posts/favs.png' %}">23</p>
+                        </div>
+                        <div class="post-main-footer-sharings">
+                            <p><img src="{% static 'pictures/posts/share.png' %}">9</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="post">
+                <div class="post-avatar">
+                    <img src="{% static 'pictures/posts/image 5.png' %}">
+                </div>
+                <div class="post-main">
+                    <div class="post-main-header">
+                        <div class="post-main-header-name">
+                            <p>Elon Musk</p>
+                        </div>
+                        <div class="post-main-header-sign">
+                            <p>@elonmusk</p>
+                        </div>
+                        <div class="post-main-header-time">
+                            <p>12 часов назад</p>
+                        </div>
+                    </div>
+                    <div class="post-main-content">
+                        <p>Has anyone seen web3? I can’t find it.</p>
+                    </div>
+                    <div class="post-main-footer">
+                        <div class="post-main-footer-replies">
+                            <p><img src="{% static 'pictures/posts/replies.png' %}">21</p>
+                        </div>
+                        <div class="post-main-footer-favs">
+                            <p><img src="{% static 'pictures/posts/favs.png' %}">23</p>
+                        </div>
+                        <div class="post-main-footer-sharings">
+                            <p><img src="{% static 'pictures/posts/share.png' %}">9</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="post">
+                <div class="post-avatar">
+                    <img src="{% static 'pictures/posts/image 7.png' %}">
+                </div>
+                <div class="post-main">
+                    <div class="post-main-header">
+                        <div class="post-main-header-name">
+                            <p>Александр</p>
+                        </div>
+                        <div class="post-main-header-sign">
+                            <p>@sportsru</p>
+                        </div>
+                        <div class="post-main-header-time">
+                            <p>2 часа назад</p>
+                        </div>
+                    </div>
+                    <div class="post-main-content">
+                        <p>Прикладываю фотки с последнего матча. С каждым днем играю все лучше. Еще пару лет и можно на
+                            Олимпиаду ехать!</p>
+                        <img src="{% static 'pictures/posts/image 6.png' %}">
+                    </div>
+                    <div class="post-main-footer">
+                        <div class="post-main-footer-replies">
+                            <p><img src="{% static 'pictures/posts/replies.png' %}">21</p>
+                        </div>
+                        <div class="post-main-footer-favs">
+                            <p><img src="{% static 'pictures/posts/favs.png' %}">23</p>
+                        </div>
+                        <div class="post-main-footer-sharings">
+                            <p><img src="{% static 'pictures/posts/share.png' %}">9</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="post">
+                <div class="post-avatar">
+                    <img src="{% static 'pictures/posts/image 8.png' %}">
+                </div>
+                <div class="post-main">
+                    <div class="post-main-header">
+                        <div class="post-main-header-name">
+                            <p>Мия Уоллес</p>
+                        </div>
+                        <div class="post-main-header-sign">
+                            <p>@mia</p>
+                        </div>
+                        <div class="post-main-header-time">
+                            <p>1 день назад</p>
+                        </div>
+                    </div>
+                    <div class="post-main-content">
+                        <p>Идут по улице три помидора: папа-помидор, мама-помидор и ребенок-помидор. Ребенок-помидор
+                            начинает отставать. Папа-помидор разозлился, подбегает к ребенку-помидору, раздавливает
+                            всмятку... и говорит: «Догоняй, кетчуп!»</p>
+                    </div>
+                    <div class="post-main-footer">
+                        <div class="post-main-footer-replies">
+                            <p><img src="{% static 'pictures/posts/replies.png' %}">21</p>
+                        </div>
+                        <div class="post-main-footer-favs">
+                            <p><img src="{% static 'pictures/posts/favs.png' %}">23</p>
+                        </div>
+                        <div class="post-main-footer-sharings">
+                            <p><img src="{% static 'pictures/posts/share.png' %}">9</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
