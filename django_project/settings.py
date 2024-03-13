@@ -11,7 +11,7 @@ env = environ.Env(
     DEBUG=(bool, True)
 )
 # reading .env file
-env.read_env('/etc/secrets/.env')
+env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
@@ -66,15 +66,26 @@ TEMPLATES = [
 WSGI_APPLICATION = 'django_project.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+# For local connect
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=f'postgres://{env("DB_USER")}:{env("DB_PASSWORD")}@{env("DB_HOST")}.oregon-postgres.render.com/{env("DB_NAME")}',
+#         conn_max_age=600
+#     )
+# }
 
+# For server connect
 DATABASES = {
-    'default': dj_database_url.config(
-        default=f'postgres://{env("DB_USER")}:{env("DB_PASSWORD")}@{env("DB_HOST")}.oregon-postgres.render.com/{env("DB_NAME")}',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': env("DB_ENGINE"),
+        'NAME': env("DB_NAME"),
+        'HOST': env("DB_HOST"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD"),
+        'PORT': env("DB_PORT")
+    }
 }
+
 
 
 # Password validation
