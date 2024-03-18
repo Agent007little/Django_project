@@ -1,0 +1,37 @@
+{% load static %}
+{% for user in users|slice:"1:" %}
+    <div class="post">
+        <div class="post-avatar">
+            <img src="{{ user.user_profile.img.url }}">
+        </div>
+        <div class="post-main">
+            <div class="post-main-header">
+                <div class="post-main-header-name">
+                    <p>{{ user.first_name }} {{ user.last_name }}</p>
+            </div>
+            <div class="post-main-header-sign">
+                <p>{{ user.email }}</p>
+            </div>
+            <div class="post-main-header-time">
+                <p>28 минут назад</p>
+            </div>
+        </div>
+        <div class="post-main-content">
+            {% for massage in user.author_massage.all|slice:":1" %}
+                <p>{{ massage.text }}</p>
+            {% endfor %}
+        </div>
+        <div class="post-main-footer">
+            <div class="post-main-footer-replies">
+                <p><img src="{% static 'pictures/posts/replies.png' %}">21</p>
+            </div>
+            <div class="post-main-footer-favs">
+                <p><img src="{% static 'pictures/posts/favs.png' %}">23</p>
+            </div>
+            <div class="post-main-footer-sharings">
+                <p><img src="{% static 'pictures/posts/share.png' %}">9</p>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endfor %}

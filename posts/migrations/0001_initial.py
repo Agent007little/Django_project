@@ -34,8 +34,8 @@ class Migration(migrations.Migration):
             name='MassageHashtag',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('hashtag_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='posts.hashtag')),
-                ('massage_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='posts.massage')),
+                ('hashtag_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='user_images.hashtag')),
+                ('massage_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='user_images.massage')),
             ],
         ),
         migrations.CreateModel(
@@ -44,7 +44,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('link', models.URLField(verbose_name='URL изображения')),
                 ('path', models.CharField(verbose_name='Путь до файла изображения')),
-                ('massage_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='posts.massage')),
+                ('massage_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='user_images.massage')),
             ],
         ),
     ]

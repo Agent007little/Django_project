@@ -74,14 +74,25 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 # }
 
 # For server connect
+# DATABASES = {
+#     'default': {
+#         'ENGINE': env("DB_ENGINE"),
+#         'NAME': env("DB_NAME"),
+#         'HOST': env("DB_HOST"),
+#         'USER': env("DB_USER"),
+#         'PASSWORD': env("DB_PASSWORD"),
+#         'PORT': env("DB_PORT")
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': env("DB_ENGINE"),
-        'NAME': env("DB_NAME"),
-        'HOST': env("DB_HOST"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'PORT': env("DB_PORT")
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_project',
+        'HOST': 'localhost',
+        'USER': 'postgres',
+        'PASSWORD': '12345',
+        'PORT': 5432
     }
 }
 
@@ -128,8 +139,9 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+MEDIA_URL = '/pictures/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'pictures')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS=["https://django-project-8q3b.onrender.com"]
