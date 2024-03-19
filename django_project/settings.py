@@ -74,25 +74,14 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 # }
 
 # For server connect
-# DATABASES = {
-#     'default': {
-#         'ENGINE': env("DB_ENGINE"),
-#         'NAME': env("DB_NAME"),
-#         'HOST': env("DB_HOST"),
-#         'USER': env("DB_USER"),
-#         'PASSWORD': env("DB_PASSWORD"),
-#         'PORT': env("DB_PORT")
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_project',
-        'HOST': 'localhost',
-        'USER': 'postgres',
-        'PASSWORD': '12345',
-        'PORT': 5432
+        'ENGINE': env("DB_ENGINE"),
+        'NAME': env("DB_NAME"),
+        'HOST': env("DB_HOST"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD"),
+        'PORT': env("DB_PORT")
     }
 }
 

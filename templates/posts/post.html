@@ -19,6 +19,9 @@
         <div class="post-main-content">
             {% for massage in user.author_massage.all|slice:":1" %}
                 <p>{{ massage.text }}</p>
+                {% if massage.massage_image %}
+                    <img src="{{ massage.massage_image.first.link }}">
+                {% endif %}
             {% endfor %}
         </div>
         <div class="post-main-footer">
