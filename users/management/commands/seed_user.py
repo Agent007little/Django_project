@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.core.management.base import BaseCommand
 
-from users.models import UserSubscription
+from users.models import UserSubscription, Profile
 
 # python manage.py seed_user --mode=refresh
 
@@ -28,6 +28,8 @@ def clear_data():
     """Deletes all table data except admin."""
     # logger.info("Delete User instances")
     User.objects.exclude(id=User.objects.first().id).delete()
+    UserSubscription.objects.all().delete()
+    Profile.objects.all().delete()
 
 
 def create_users():
@@ -60,6 +62,7 @@ def create_users():
         User.objects.create(**user_data)
 
     create_user_subscription()
+    create_profile()
     # logger.info("Creating Users completed")
 
 
@@ -101,6 +104,14 @@ def create_user_subscription():
             UserSubscription.objects.create(user_id=user, subscription_id=subscription_user1)
             UserSubscription.objects.create(user_id=user, subscription_id=subscription_user2)
             UserSubscription.objects.create(user_id=user, subscription_id=subscription_user3)
+
+
+def create_profile():
+    users = User.objects.all()[1:]
+
+    for num, user in enumerate(users, start=1):
+        img = 'image_' + str(num) # здесь должно быть заполнение аватарок.
+        Profile.objects.create(user=user)
 
 
 def run_seed(self, mode):

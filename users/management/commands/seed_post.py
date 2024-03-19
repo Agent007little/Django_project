@@ -6,7 +6,7 @@ from posts.models import Massage, Hashtag, MassageHashtag, PostImage
 
 # python manage.py seed_user --mode=refresh
 
-""" Clear all data and creates posts """
+""" Clear all data and creates user_images """
 MODE_REFRESH = 'refresh'
 
 """ Clear all data and do not create any object """
@@ -36,7 +36,7 @@ def clear_data():
 
 
 def create_posts():
-    """Creates posts"""
+    """Creates user_images"""
     # logger.info("Creating Users in process...")
     create_massages()
     create_hashtags()
@@ -46,7 +46,7 @@ def create_posts():
 
 
 def create_massages():
-    users = User.objects.all()[:10]  # Выбираем первых 10 пользователей
+    users = User.objects.all()[1:11]  # Выбираем первых 10 пользователей, кроме админа
 
     massages_data = [
         {"text": "Прекрасный день для прогулки! 🌳", "author": users[0], "likes": choice(list(users))},
@@ -142,5 +142,5 @@ def run_seed(self, mode):
     if mode == MODE_CLEAR:
         return
 
-    # Creating posts
+    # Creating user_images
     create_posts()

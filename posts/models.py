@@ -24,4 +24,4 @@ class PostImage(models.Model):
     """Модель изображений"""
     link = models.URLField('URL изображения')
     path = models.CharField('Путь до файла изображения')
-    massage_id = models.ForeignKey(Massage, on_delete=models.CASCADE)
+    massage_id = models.ForeignKey(Massage, on_delete=models.CASCADE, related_name='massage_image')
