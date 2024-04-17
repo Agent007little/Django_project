@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,700&display=swap');
+
+body {
+    margin-top: 10%;
+    padding: 0;
+    background-color: #F4F5F6;
+
+}
+
+/*Настройки шапки*/
+
+header.container {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+}
+
+#footer-icon {
+  text-align: center;
+}
+
+header.container a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+}
+
+/*Основная часть*/
+
+h1 {
+    margin-left: 10%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.main-sett {
+    display: flex;
+    width: 69%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+    padding-left: 2%;
+}
+
+.profile-form input[type="text"],
+.profile-form textarea {
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    width: 93%;
+    margin-bottom: 5%;
+    padding-bottom: 1%;
+    padding-top: 3%;
+    padding-left: 2%;
+}
+
+#name {
+    margin-top: 5%;
+}
+
+.profile-form button {
+    background-color: #0057FF;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.main-sett #name,
+.main-sett #nickname {
+    width: 65%;
+}
+
+.main-sett img {
+    width: 27%;
+    border-radius: 50%;
+}
+
+.main-sett #birthday,
+.main-sett #show-everyone {
+    width: 45%;
+}
+
+.main-nav {
+    width: 30%;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: 2%;
+    padding-left: 3%;
+}
+
+.main-nav h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding-bottom: 3%;
+}
+
+.main-nav nav {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main-nav nav a {
+    padding-bottom: 5%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+}
+
+
