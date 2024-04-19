@@ -134,4 +134,14 @@ h1 {
     text-decoration: none;
 }
 
+/*Страница регистрации*/
+
+.registration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid silver;
+    padding: 20px;
+}
 
