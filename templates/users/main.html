@@ -1,0 +1,32 @@
+{% load static %}
+<h1>Редактировать профиль</h1>
+<div class="main">
+    <div class="main-sett">
+        <form method="post" class="profile-form">
+{#            <label for="name">Ваше имя</label>#}
+            <input type="text" id="name" placeholder="Ваше имя" value="Александр">
+{#            <label for="nickname">Никнейм</label>#}
+            <input type="text" id="nickname" value="@burtovoy">
+            <img src="{% static 'pictures/image_2.png' %}">
+{#            <label for="about-myself">О себе</label>#}
+            <textarea name="" id="about-myself">Предприниматель и ментор по программированию</textarea>
+{#            <label for="location">Геолокация</label>#}
+            <input type="text" id="location" value="Волгоград">
+            <label for="web-site">Веб-сайт</label>
+            <input type="text" id="web-site" value="burtovoy.org">
+{#            <label for="birthday">День рожденья</label>#}
+            <input type="text" id="birthday" value="14.06.1946">
+{#            <label for="show-everyone">Показывать дату рождения</label>#}
+            <input type="text" id="show-everyone" value="Показывать всем">
+            <button>Сохранить</button>
+        </form>
+    </div>
+    <div class="main-nav">
+        <h2>Настройки</h2>
+        <nav>
+            <a href="#">Настройки профиля</a>
+            <a href="#">Сменить пароль</a>
+            <a href="#">Сменить e-mail</a>
+        </nav>
+    </div>
+</div>
