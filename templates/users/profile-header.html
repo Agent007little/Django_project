@@ -10,4 +10,10 @@
     </nav>
     <img src="{% static 'pictures/main-page/Vector.png' %}" id="footer-icon">
 {#    <img src="{% static 'pictures/image_2.png' %}">#}
+    {% if user.is_authenticated %}
+        <form action="{% url 'exit' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Выйти из профиля</button>
+        </form>
+    {% endif %}
 </header>

@@ -1,6 +1,6 @@
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render, redirect
-# from django.contrib.auth.forms import UserCreationForm
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, LoginUserForm
 from django.contrib import messages
 
 
@@ -27,3 +27,9 @@ def register(request):
             'form': form
         }
     )
+
+
+class LoginUser(LoginView):
+    form_class = LoginUserForm
+    template_name = "users/auth.html"
+    extra_context = {"title": "Авторизация"}
