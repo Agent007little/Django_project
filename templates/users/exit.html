@@ -1,0 +1,6 @@
+{% extends 'base-profile.html' %}
+{% load static %}
+{% block main %}
+    <h1>Вы успешно вышли из аккаунта</h1>
+    <a href="{% url 'auth' %}">Войти снова</a>
+{% endblock %}
